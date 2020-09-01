@@ -47,6 +47,9 @@ string helper(map<int,int> mp,int k){
         max_second_digit_of_hour=3;
     else
         max_second_digit_of_hour=9;
+
+    if(!found) 
+        return "";
     
     
 
