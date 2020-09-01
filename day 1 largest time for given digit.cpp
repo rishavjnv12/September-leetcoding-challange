@@ -29,6 +29,7 @@ A.length == 4
 using namespace std;
 
 bool has(map<int,int> &mp,int k){
+
     if(mp[k]){
         mp[k]--;
         return true;
@@ -47,9 +48,6 @@ string helper(map<int,int> mp,int k){
         max_second_digit_of_hour=3;
     else
         max_second_digit_of_hour=9;
-
-    if(!found) 
-        return "";
     
     
 
@@ -60,6 +58,8 @@ string helper(map<int,int> mp,int k){
             break;
         }
     }
+    if(!found)
+        return "";
 
     ans+=':';
     found=false;
@@ -109,7 +109,7 @@ string largestTimeFromDigits(vector<int>& A) {
 
 
 int main(){
-    vector<int> v={1,2,3,4};
+    vector<int> v={2,0,6,6};
     cout<<largestTimeFromDigits(v)<<endl;
     return 0;
 }
